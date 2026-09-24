@@ -1,0 +1,45 @@
+/* ============================================================
+   DMDL CUSTOM SKIN — layered on top of MFL's Onyx base skin
+   ============================================================
+   CONFIRMED WORKING: fonts, body background, base text/link colors.
+   These target universal elements that exist on every MFL page
+   regardless of skin, so they're safe bets without needing to see
+   Onyx's actual internal class names.
+
+   NOT YET CONFIRMED: deep restyling of MFL's own module header bars,
+   nav menu chrome, and table borders to fully match this palette.
+   Those need either real Onyx page-source class names, or a
+   test-and-adjust pass once this file is actually live, since
+   guessing selector names risks a rule that silently does nothing.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Rye&family=Oswald:wght@400;500;600;700&display=swap');
+
+/* ---- Background image ----
+   Currently using chubby_humbles.png, hosted on the same GitHub
+   Pages repo as the helmet images. To swap in different artwork
+   later, just replace the url() below with the new file's address. */
+
+body {
+  background-color: #0e0c0c;
+  background-image:
+    linear-gradient(rgba(14,12,12,0.88), rgba(14,12,12,0.88)),
+    url('https://synergy327.github.io/DMDL-Helmets/chubby_humbles.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Oswald', sans-serif;
+  color: #ece6da;
+}
+
+a {
+  color: #e08a3c;
+}
+a:hover {
+  color: #f2a75c;
+}
+
+::selection {
+  background: #772014;
+  color: #fff;
+}
