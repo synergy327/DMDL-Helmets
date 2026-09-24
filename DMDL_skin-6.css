@@ -1,0 +1,111 @@
+/* ============================================================
+   DMDL CUSTOM SKIN — layered on top of MFL's Onyx base skin
+   ============================================================
+   Brand color, confirmed directly from the league banner: #772014
+   Used two ways below:
+   - RAW #772014 on anything structural: borders, module boxes,
+     header bar backgrounds. These don't need to be read as text,
+     so the true color is used exactly as given.
+   - #c9392a, a brighter tint of the same maroon, anywhere text
+     needs to sit on the near-black background: links, captions,
+     table headers. Raw #772014 is too dark to read clearly at
+     that size and contrast; this keeps it recognizably "your red"
+     while staying legible.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Rye&family=Oswald:wght@400;500;600;700&display=swap');
+
+/* ---- Background image ----
+   Currently using chubby_humbles.png, hosted on the same GitHub
+   Pages repo as the helmet images. To swap in different artwork
+   later, just replace the url() below with the new file's address. */
+
+body {
+  background-color: #0e0c0c;
+  background-image:
+    linear-gradient(rgba(14,12,12,0.31), rgba(14,12,12,0.31)),
+    url('https://synergy327.github.io/DMDL-Helmets/chubby_humbles.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-family: 'Oswald', sans-serif;
+  color: #ece6da;
+}
+
+a {
+  color: #c9392a;
+}
+a:hover {
+  color: #e0503d;
+}
+
+::selection {
+  background: #772014;
+  color: #fff;
+}
+
+/* ============================================================
+   MODULE & TABLE STYLING
+   ============================================================
+   Selectors confirmed real from DMDL's own rulebook/ticker code
+   and MFL's actual base/Onyx CSS (fetched and read directly).
+   Module borders now use the real brand maroon, matching how
+   your team and league banners are bordered. */
+
+.homepagemodule, .report {
+  background: #171313 !important;
+  border: 1px solid #772014 !important;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.homepagemodule caption, .report caption {
+  background: #1e1616 !important;
+  border-bottom: 2px solid #772014 !important;
+  padding: 12px 18px !important;
+  font-family: 'Rye', serif !important;
+  font-size: 16px !important;
+  letter-spacing: .04em;
+  color: #c9392a !important;
+  text-align: left !important;
+}
+
+.homepagemodule th, .report th {
+  background: #1a1512 !important;
+  color: #a89a8a !important;
+  font-family: 'Oswald', sans-serif !important;
+  font-size: 11px !important;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-weight: 500 !important;
+  border-bottom: 1px solid #772014 !important;
+}
+
+.homepagemodule td, .report td {
+  border-bottom: 1px solid #201a18 !important;
+  color: #ece6da !important;
+}
+
+.oddtablerow {
+  background: #1a1210 !important;
+}
+.eventablerow {
+  background: #2a1c16 !important;
+}
+.oddtablerow:hover, .eventablerow:hover {
+  background: #33241c !important;
+}
+.oddtablerow a, .oddtablerow a:link, .oddtablerow a:visited, .oddtablerow a:active,
+.eventablerow a, .eventablerow a:link, .eventablerow a:visited, .eventablerow a:active {
+  color: #c9392a !important;
+}
+.oddtablerow a:hover, .eventablerow a:hover {
+  color: #e0503d !important;
+}
+
+.myfantasyleague_menu, .myfantasyleague_tabmenu, .myfantasyleague_menuMobile {
+  background: #1e1616 !important;
+  border-color: #772014 !important;
+  font-family: 'Oswald', sans-serif !important;
+}
