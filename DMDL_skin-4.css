@@ -1,0 +1,107 @@
+/* ============================================================
+   DMDL CUSTOM SKIN — layered on top of MFL's Onyx base skin
+   ============================================================
+   CONFIRMED WORKING: fonts, body background, base text/link colors.
+   These target universal elements that exist on every MFL page
+   regardless of skin, so they're safe bets without needing to see
+   Onyx's actual internal class names.
+
+   NOT YET CONFIRMED: deep restyling of MFL's own module header bars,
+   nav menu chrome, and table borders to fully match this palette.
+   Those need either real Onyx page-source class names, or a
+   test-and-adjust pass once this file is actually live, since
+   guessing selector names risks a rule that silently does nothing.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Rye&family=Oswald:wght@400;500;600;700&display=swap');
+
+/* ---- Background image ----
+   Currently using chubby_humbles.png, hosted on the same GitHub
+   Pages repo as the helmet images. To swap in different artwork
+   later, just replace the url() below with the new file's address. */
+
+body {
+  background-color: #0e0c0c;
+  background-image:
+    linear-gradient(rgba(14,12,12,0.31), rgba(14,12,12,0.31)),
+    url('https://synergy327.github.io/DMDL-Helmets/chubby_humbles.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-family: 'Oswald', sans-serif;
+  color: #ece6da;
+}
+
+a {
+  color: #e08a3c;
+}
+a:hover {
+  color: #f2a75c;
+}
+
+::selection {
+  background: #772014;
+  color: #fff;
+}
+
+/* ============================================================
+   MODULE & TABLE STYLING
+   ============================================================
+   These selectors are confirmed real, pulled directly from
+   DMDL's own rulebook and ticker code seen earlier in this
+   project (.homepagemodule, .report, caption, .oddtablerow,
+   .eventablerow, .myfantasyleague_menu/tabmenu), not guessed.
+   Onyx may still have additional wrapper classes we haven't
+   seen yet, so treat this as the confirmed baseline, with
+   room to refine once it's live and we can see what's left. */
+
+.homepagemodule, .report {
+  background: #171313 !important;
+  border: 1px solid #2c2320 !important;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.homepagemodule caption, .report caption {
+  background: #1e1616 !important;
+  border-bottom: 1px solid #3a2620 !important;
+  padding: 12px 18px !important;
+  font-family: 'Rye', serif !important;
+  font-size: 16px !important;
+  letter-spacing: .04em;
+  color: #e8b98a !important;
+  text-align: left !important;
+}
+
+.homepagemodule th, .report th {
+  background: #1a1512 !important;
+  color: #a89a8a !important;
+  font-family: 'Oswald', sans-serif !important;
+  font-size: 11px !important;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-weight: 500 !important;
+  border-bottom: 1px solid #2c2320 !important;
+}
+
+.homepagemodule td, .report td {
+  border-bottom: 1px solid #201a18 !important;
+  color: #ece6da !important;
+}
+
+.oddtablerow {
+  background: #171313 !important;
+}
+.eventablerow {
+  background: #1a1512 !important;
+}
+.oddtablerow:hover, .eventablerow:hover {
+  background: #221a17 !important;
+}
+
+.myfantasyleague_menu, .myfantasyleague_tabmenu, .myfantasyleague_menuMobile {
+  background: #1e1616 !important;
+  border-color: #3a2620 !important;
+  font-family: 'Oswald', sans-serif !important;
+}
