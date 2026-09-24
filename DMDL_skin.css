@@ -1,16 +1,16 @@
 /* ============================================================
    DMDL CUSTOM SKIN — layered on top of MFL's Onyx base skin
    ============================================================
-   Brand color, confirmed directly from the league banner: #772014
-   Used two ways below:
-   - RAW #772014 on anything structural: borders, module boxes,
-     header bar backgrounds. These don't need to be read as text,
-     so the true color is used exactly as given.
-   - #c9392a, a brighter tint of the same maroon, anywhere text
-     needs to sit on the near-black background: links, captions,
-     table headers. Raw #772014 is too dark to read clearly at
-     that size and contrast; this keeps it recognizably "your red"
-     while staying legible.
+   CONFIRMED WORKING: fonts, body background, base text/link colors.
+   These target universal elements that exist on every MFL page
+   regardless of skin, so they're safe bets without needing to see
+   Onyx's actual internal class names.
+
+   NOT YET CONFIRMED: deep restyling of MFL's own module header bars,
+   nav menu chrome, and table borders to fully match this palette.
+   Those need either real Onyx page-source class names, or a
+   test-and-adjust pass once this file is actually live, since
+   guessing selector names risks a rule that silently does nothing.
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Rye&family=Oswald:wght@400;500;600;700&display=swap');
@@ -34,10 +34,10 @@ body {
 }
 
 a {
-  color: #c9392a;
+  color: #e08a3c;
 }
 a:hover {
-  color: #e0503d;
+  color: #f2a75c;
 }
 
 ::selection {
@@ -47,27 +47,23 @@ a:hover {
 
 /* ============================================================
    MODULE & TABLE STYLING
-   ============================================================
-   Selectors confirmed real from DMDL's own rulebook/ticker code
-   and MFL's actual base/Onyx CSS (fetched and read directly).
-   Module borders now use the real brand maroon, matching how
-   your team and league banners are bordered. */
+   ============================================================ */
 
 .homepagemodule, .report {
   background: #171313 !important;
-  border: 1px solid #772014 !important;
+  border: 1px solid #2c2320 !important;
   border-radius: 6px;
   overflow: hidden;
 }
 
 .homepagemodule caption, .report caption {
   background: #1e1616 !important;
-  border-bottom: 2px solid #772014 !important;
+  border-bottom: 1px solid #3a2620 !important;
   padding: 12px 18px !important;
   font-family: 'Rye', serif !important;
   font-size: 16px !important;
   letter-spacing: .04em;
-  color: #c9392a !important;
+  color: #e8b98a !important;
   text-align: left !important;
 }
 
@@ -79,7 +75,7 @@ a:hover {
   text-transform: uppercase;
   letter-spacing: .06em;
   font-weight: 500 !important;
-  border-bottom: 1px solid #772014 !important;
+  border-bottom: 1px solid #2c2320 !important;
 }
 
 .homepagemodule td, .report td {
@@ -98,14 +94,14 @@ a:hover {
 }
 .oddtablerow a, .oddtablerow a:link, .oddtablerow a:visited, .oddtablerow a:active,
 .eventablerow a, .eventablerow a:link, .eventablerow a:visited, .eventablerow a:active {
-  color: #c9392a !important;
+  color: #e08a3c !important;
 }
 .oddtablerow a:hover, .eventablerow a:hover {
-  color: #e0503d !important;
+  color: #f2a75c !important;
 }
 
 .myfantasyleague_menu, .myfantasyleague_tabmenu, .myfantasyleague_menuMobile {
   background: #1e1616 !important;
-  border-color: #772014 !important;
+  border-color: #3a2620 !important;
   font-family: 'Oswald', sans-serif !important;
 }
