@@ -7,7 +7,7 @@
    Font Awesome link tags. */
 
 /* ============================================================
-   DMDL CUSTOM SKIN â€” layered on top of MFL's Onyx base skin
+   DMDL CUSTOM SKIN — layered on top of MFL's Onyx base skin
    ============================================================
    CONFIRMED WORKING: fonts, body background, base text/link colors.
    These target universal elements that exist on every MFL page
@@ -106,6 +106,25 @@ a:hover {
 }
 .oddtablerow a:hover, .eventablerow a:hover {
   color: #f2a75c !important;
+}
+
+/* ---- Highlight for MY team's rows ----
+   MFL tags rows that belong to the logged-in owner's franchise with
+   the class "myfranchise" (confirmed on the Top Performers page:
+   <tr class="eventablerow myfranchise">). The zebra colors above use
+   !important, which was covering MFL's own highlight. These rules are
+   more specific, so they win, and they set the highlight color
+   directly instead of relying on MFL's. To change the highlight,
+   edit the two colors below. First is normal, second is on hover. */
+tr.myfranchise,
+tr.myfranchise.oddtablerow,
+tr.myfranchise.eventablerow {
+  background: #46301f !important;
+}
+tr.myfranchise:hover,
+tr.myfranchise.oddtablerow:hover,
+tr.myfranchise.eventablerow:hover {
+  background: #54382a !important;
 }
 
 .myfantasyleague_menu, .myfantasyleague_tabmenu, .myfantasyleague_menuMobile {
