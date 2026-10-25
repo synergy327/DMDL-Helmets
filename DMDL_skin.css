@@ -1,5 +1,13 @@
+@import url(https://mflscripts.com/font-awesome/css/all.min.css);
+
+/* FONT AWESOME: the line above must stay the very first line of this
+   file. MFLScripts widgets (Playoff Seedings, Overview, Marquee, etc.)
+   draw their icons with Font Awesome and need it loaded. Loading it
+   here covers every page, so the header message does not need its own
+   Font Awesome link tags. */
+
 /* ============================================================
-   DMDL CUSTOM SKIN — layered on top of MFL's Onyx base skin
+   DMDL CUSTOM SKIN â€” layered on top of MFL's Onyx base skin
    ============================================================
    CONFIRMED WORKING: fonts, body background, base text/link colors.
    These target universal elements that exist on every MFL page
