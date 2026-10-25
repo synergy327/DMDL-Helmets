@@ -133,7 +133,8 @@ tr.myfranchise.eventablerow:hover {
    !important on border-bottom, which erased those lines. These rules
    put the bracket lines back and color them to match the skin.
    To change the line color, edit #e08a3c in both places. */
-.playoffbracket.homepagemodule td.topteam {
+.playoffbracket.homepagemodule td.topteam,
+.playoffbracket.homepagemodule td[class*="team"] {
   border-bottom: 2px solid #e08a3c !important;
 }
 .playoffbracket.homepagemodule td {
